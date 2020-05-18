@@ -58,7 +58,7 @@ class Movie(models.Model):
     draft = models.BooleanField('Chernovik', default=False)
 
     def __str__(self):
-        return self.name
+        return self.title
 
     class Meta:
         verbose_name = 'Film'

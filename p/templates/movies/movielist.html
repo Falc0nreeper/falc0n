@@ -23,13 +23,13 @@
 </head>
 <body>
 <!--preloading-->
-<!-- <div id="preloader">
+<div id="preloader">
     <img class="logo" src="{% static 'images/logo1.png' %}" alt="" width="119" height="58">
     <div id="status">
         <span></span>
         <span></span>
     </div>
-</div> -->
+</div>
 <!--end of preloading-->
 <!--login form popup-->
 <div class="login-wrapper" id="login-content">
@@ -259,7 +259,7 @@
 				</div>
 				{% for movie in movie_list%}
 				<div class="movie-item-style-2">
-					<img src="{{ movie.poster }}" alt="">
+					<img src="{{ movie.poster.url }}" alt="">
 					<div class="mv-item-infor">
 						<h6><a href="{% static 'images/uploads/mv2.jpg' %}">{{ movie.title}} <span>{{movie.years}}</span></a></h6>
 						<p class="rate"><i class="ion-android-star"></i><span>8.1</span> /10</p>
