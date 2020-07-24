@@ -242,7 +242,7 @@
 		<div class="row ipad-width2">
 			<div class="col-md-4 col-sm-12 col-xs-12">
 				<div class="movie-img sticky-sb">
-					<img src="images/uploads/movie-single.jpg" alt="">
+					<img src="{{movie.poster.url}}" alt="">
 					<div class="movie-btn">	
 						<div class="btn-transform transform-vertical red">
 							<div><a href="#" class="item item-1 redbtn"> <i class="ion-play"></i> Watch Trailer</a></div>
@@ -257,7 +257,7 @@
 			</div>
 			<div class="col-md-8 col-sm-12 col-xs-12">
 				<div class="movie-single-ct main-content">
-					<h1 class="bd-hd">Skyfall: Quantum of Spectre <span>2015</span></h1>
+					<h1 class="bd-hd">{{movie.title}} :{{movie.tagline}} <span>{{movie.years}}</span></h1>
 					<div class="social-btn">
 						<a href="#" class="parent-btn"><i class="ion-heart"></i> Add to Favorite</a>
 						<div class="hover-bnt">
@@ -303,7 +303,7 @@
 						        <div id="overview" class="tab active">
 						            <div class="row">
 						            	<div class="col-md-8 col-sm-12 col-xs-12">
-						            		<p>Tony Stark creates the Ultron Program to protect the world, but when the peacekeeping program becomes hostile, The Avengers go into action to try and defeat a virtually impossible enemy together. Earth's mightiest heroes must come together once again to protect the world from global extinction.</p>
+						            		<p>{{movie.description}}</p>
 						            		<div class="title-hd-sm">
 												<h4>Videos & Photos</h4>
 												<a href="#" class="time">All 5 Videos & 245 Photos <i class="ion-ios-arrow-right"></i></a>
@@ -325,8 +325,8 @@
 											<div class="mvcast-item">											
 												<div class="cast-it">
 													<div class="cast-left">
-														<img src="images/uploads/cast1.jpg" alt="">
-														<a href="#">Robert Downey Jr.</a>
+														<img src="{{actor.image}}" alt="">
+														<a href="#">{{actor.name}}</a>
 													</div>
 													<p>...  Robert Downey Jr.</p>
 												</div>
