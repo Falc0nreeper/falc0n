@@ -27,8 +27,8 @@
 					<div class="mv-item-infor">
 						<h6><a href="{{ movie.get_absolute_url}}">{{ movie.title}} <span>{{movie.years}}</span></a></h6>
 						<p class="rate"><i class="ion-android-star"></i><span>8.1</span> /10</p>
-						<p class="describe">{{movie.description}}.</p>
-						<p class="run-time"> Run Time: 2h21’    .     <span>MMPA: PG-13 </span>    .     <span>Release: 1 May 2015</span></p>
+						<p class="describe">{{movie.description|safe}}.</p>
+						<p class="run-time">Date Release:<span>{{movie.years}}</span></p>
 						<p>Director: <a href="#">{{movie.directors}}</a></p>
 						<p>Stars: <a href="#">{{movie.actors}}</a> <a href="#">{{movie.actors}}</a> <a href="#">{{movie.actors}}</a></p>
 					</div>

@@ -92,6 +92,7 @@ class RatingStar(models.Model):
         verbose_name_plural = 'Yulduzlar reytingi'
 
 class Rating(models.Model):
+    name = models.CharField('Nomi', max_length=15)
     ip = models.CharField('Ip adress', max_length=15)
     star = models.ForeignKey(RatingStar, on_delete=models.CASCADE, verbose_name="yulduz")
     movie = models.ForeignKey(Movie, on_delete=models.CASCADE, verbose_name='Film')

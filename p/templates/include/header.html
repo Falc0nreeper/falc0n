@@ -1,5 +1,5 @@
 <!--preloading-->
-
+{% load movie_tag %}
 <!-- BEGIN | Header -->
 <header class="ht-header">
 	<div class="container">
@@ -36,13 +36,18 @@
 							<a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
 							movies<i class="fa fa-angle-down" aria-hidden="true"></i>
 							</a>
+
 							<ul class="dropdown-menu level1">
 								<li class="dropdown">
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Movie grid<i class="ion-ios-arrow-forward"></i></a>
-									<ul class="dropdown-menu level2">
-										<li><a href="moviegrid.html">Movie grid</a></li>
-										<li><a href="moviegridfw.html">movie grid full width</a></li>
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Categories<i class="ion-ios-arrow-forward"></i></a>
+										<ul class="dropdown-menu level2">
+											{% get_categories as categories %}
+											{% for category in categories %}
+										<li><a href="/">{{ catergory.name }}</a></li>
+										{% endfor %}
 									</ul>
+									
+									
 								</li>
 								<li><a href="movielist.html">Movie list</a></li>
 								<li><a href="moviesingle.html">Movie single</a></li>
